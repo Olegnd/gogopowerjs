@@ -26,11 +26,10 @@ console.log(arrFibonacciEvenMinusTwo);
 
     arrFibonacciUnevenMinusFour = arrFibonacci.filter(function(value){
         if (value % 2 != 0) {
-            //value = value - 4;
             return value;
         }
     }).map(function(value){
-            return value - 2; 
+            return value - 4; 
            })
 
 console.log(arrFibonacciUnevenMinusFour.length);
