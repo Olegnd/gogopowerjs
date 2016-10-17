@@ -10,8 +10,8 @@ while (index <= 39) {
     index = index + 1;
     }
 
-//console.log(arrFibonacci.length);
-//console.log(arrFibonacci);
+console.log(arrFibonacci.length);
+console.log(arrFibonacci);
 
     arrFibonacciEvenMinusTwo = arrFibonacci.filter(function(value){
         if (value % 2 === 0) {
@@ -20,8 +20,8 @@ while (index <= 39) {
         }
     })
 
-//console.log(arrFibonacciEvenMinusTwo.length);
-//console.log(arrFibonacciEvenMinusTwo);
+console.log(arrFibonacciEvenMinusTwo.length);
+console.log(arrFibonacciEvenMinusTwo);
 
     arrFibonacciUnevenMinusFour = arrFibonacci.filter(function(value){
         if (value % 2 != 0) {
@@ -30,22 +30,22 @@ while (index <= 39) {
         }
     })
 
-//console.log(arrFibonacciUnevenMinusFour.length);
-//console.log(arrFibonacciUnevenMinusFour);
+console.log(arrFibonacciUnevenMinusFour.length);
+console.log(arrFibonacciUnevenMinusFour);
 
     everageArrFibonacciEvenMinusTwo = arrFibonacciEvenMinusTwo.reduce(
             function(previousValue, currentValue) {
                     return previousValue + currentValue;
     }) / (arrFibonacciEvenMinusTwo.length);
 
-//console.log(everageArrFibonacciEvenMinusTwo);
+console.log(everageArrFibonacciEvenMinusTwo);
 
     everageArrFibonacciUnevenMinusFour = arrFibonacciUnevenMinusFour.reduce(
             function(previousValue, currentValue, index) {
                     return previousValue + currentValue;
     }) / (arrFibonacciUnevenMinusFour.length);
     
-//console.log(everageArrFibonacciUnevenMinusFour);
+console.log(everageArrFibonacciUnevenMinusFour);
 
 
 
