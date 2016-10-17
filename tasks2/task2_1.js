@@ -1,6 +1,9 @@
 'use strict';
 var n = 1;
 function isPowerOfTwo(value) {
+    
+console.log('n= ', n);
+    
     if (value % 2 != 0) {
         return false;
     }
@@ -15,5 +18,5 @@ function isPowerOfTwo(value) {
         return false;
     }
 }
-//console.log('n= ', n);
-console.log(isPowerOfTwo(1024));
+
+console.log(isPowerOfTwo(1020));
