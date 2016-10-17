@@ -1,6 +1,6 @@
 'use strict';
 function increment(value1) {
-    return function(value2) {
-        
+    return function (value2) {
+
     }
 }

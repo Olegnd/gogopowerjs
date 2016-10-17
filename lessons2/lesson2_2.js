@@ -1,8 +1,8 @@
 'use strict';
-function add(n){
+function add(n) {
     return function (x) {
-            return x + n;
-    } 
+        return x + n;
+    }
 }
 var addFive = add(5);
 
