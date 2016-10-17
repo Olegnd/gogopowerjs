@@ -15,10 +15,11 @@ console.log(arrFibonacci);
 
     arrFibonacciEvenMinusTwo = arrFibonacci.filter(function(value){
         if (value % 2 === 0) {
-            //value = value - 2;
             return value;
         }
-    })
+    }).map(function(value){
+            return value - 2; 
+           })
 
 console.log(arrFibonacciEvenMinusTwo.length);
 console.log(arrFibonacciEvenMinusTwo);
@@ -28,7 +29,9 @@ console.log(arrFibonacciEvenMinusTwo);
             //value = value - 4;
             return value;
         }
-    })
+    }).map(function(value){
+            return value - 2; 
+           })
 
 console.log(arrFibonacciUnevenMinusFour.length);
 console.log(arrFibonacciUnevenMinusFour);
