@@ -15,5 +15,5 @@ function isPowerOfTwo(value) {
         return false;
     }
 }
-console.log('n= ', n);
+//console.log('n= ', n);
 console.log(isPowerOfTwo(1024));
