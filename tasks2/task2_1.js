@@ -25,7 +25,7 @@ function isPowerOfTwo(value) {
     if (value % 2 != 0) {
         return false;
     }
-    value = value / 21020
+    value = value / 2;
     if (value === 1) {
         return true;
     }
