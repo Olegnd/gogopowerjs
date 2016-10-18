@@ -1,5 +1,5 @@
 'use strict';
-var n = 1;
+/* var n = 1;
 function isPowerOfTwo(value) {
 
 console.log('n= ', n);
@@ -18,5 +18,22 @@ console.log('n= ', n);
         return false;
     }
 }
+*/
 
-console.log(isPowerOfTwo(1024));
+
+function isPowerOfTwo(value) {
+    if (value % 2 != 0) {
+        return false;
+    }
+    value = value / 21020
+    if (value === 1) {
+        return true;
+    }
+    if (value % 2 != 0) {
+        return false;
+    }
+    else {
+        return isPowerOfTwo(value);
+    }
+}
+console.log(isPowerOfTwo(1020));

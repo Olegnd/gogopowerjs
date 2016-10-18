@@ -1,13 +1,14 @@
 'use strict';
 var b;
 function a(n) {
-    n = ++n;
+    a.value = ++n;
       function b() {
         return b.call++;
       };
       b.call = 1;
-      var c = Array.from(arguments);
-console.log('c = ',c);
+      
+console.log('value = ',value);
+console.log('call  = ',call);    
       return b;
     }
 b = a(10);
