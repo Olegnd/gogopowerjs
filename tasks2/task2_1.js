@@ -22,9 +22,9 @@ console.log('n= ', n);
 
 
 function isPowerOfTwo(value) {
-    if (value % 2 != 0) {
-        return false;
-    }
+//    if (value % 2 != 0) {
+//        return false;
+//    }
     value = value / 2;
     if (value === 1) {
         return true;
@@ -36,4 +36,4 @@ function isPowerOfTwo(value) {
         return isPowerOfTwo(value);
     }
 }
-console.log(isPowerOfTwo(1020));
+console.log(isPowerOfTwo(8));
