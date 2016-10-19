@@ -22,15 +22,12 @@ console.log('n= ', n);
 
 
 function isPowerOfTwo(value) {
-//    if (value % 2 != 0) {
-//        return false;
-//    }
+    if (value % 2 != 0) {
+        return false;
+    }
     value = value / 2;
     if (value === 1) {
         return true;
-    }
-    if (value % 2 != 0) {
-        return false;
     }
     else {
         return isPowerOfTwo(value);
