@@ -1,0 +1,32 @@
+.slider {
+	width: 1000px;
+	height: 600px;
+	overflow: hidden;
+}
+
+
+.slider__list {
+	display: flex;
+	flex-flow: row;
+	list-style: none;
+	padding-left: 0;
+
+	transition: all 0.5s;
+}
+
+/*    
+button {
+	font-weight: 700;
+    color: white;
+    background: rgb(64,199,129);
+} 
+
+button:hover { 
+	background: rgb(53, 167, 110); 
+	}
+button:active {
+  background: rgb(33,147,90);
+}
+*/
+
+
