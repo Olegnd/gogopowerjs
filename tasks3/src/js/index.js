@@ -15,21 +15,31 @@
 	}
 
 	function getActiveNumber() {
-		return $('.slider__list li.active').index() + 1;
+		var index;
+		index = $('.slider__list li.active').index();
+			console.log('index1 = ',index);
+			if (index <= 3) {
+				return index = index + 1;
+			}
+			else {
+			console.log('index2 = ',index);
+				return 0;
+			}
 	}
 
 	function nextSlide() {
 		var activeSlideNumber = getActiveNumber();
-		console.log('activeSlideNumber= ', activeSlideNumber);
 		var nextSlideNumber = activeSlideNumber + 1;
-		console.log('nextSlideNumber  = ', nextSlideNumber);
+		console.log('activeSlideNumber = ', activeSlideNumber);
+		console.log('nextSlideNumber   = ', nextSlideNumber);
 		setSlide(nextSlideNumber);
 
 	}
 
-	setInterval(function () {
+	setInterval(function() {
 		var slide = getRandom(0, 5);
+		console.log('slide = ',slide)
 		nextSlide();
-	}, 4000);
+	}, 2000);
 
 })();
