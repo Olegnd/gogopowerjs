@@ -1,45 +1,81 @@
 "use strict";
 (function () {
+	var intervalID = autoplay();
 
 	function getRandom(min, max) {
 		return Math.floor(min + (max - min) * Math.random());
 	}
 
 	function setSlide(number) {
-		var activeSlide = $('.slider__list').children(':nth-child(' + number + ')');
+		var activeSlide = $('.slider__list').children(':nth-child(' + number + ')')
 		var list = $('.slider__list');
-		list.css('transform', 'translateX(' + (-100 * number) + '%)');
+		list.css('transform', 'translateX(' + (-100 * (number - 1)) + '%)');
 		list.children().removeClass('active');
 		activeSlide.addClass('active');
 		console.log('SLIDE HAS BEEN CHANGED');
 	}
 
 	function getActiveNumber() {
-		var index;
-		index = $('.slider__list li.active').index();
-			console.log('index1 = ',index);
-			if (index <= 3) {
-				return index = index + 1;
-			}
-			else {
-			console.log('index2 = ',index);
-				return 0;
-			}
+		return $('.slider__list li.active').index() + 1;
+	}
+
+	function getSlidesCount() {
+		return $('.slider__list li').length;
 	}
 
 	function nextSlide() {
 		var activeSlideNumber = getActiveNumber();
 		var nextSlideNumber = activeSlideNumber + 1;
-		console.log('activeSlideNumber = ', activeSlideNumber);
-		console.log('nextSlideNumber   = ', nextSlideNumber);
-		setSlide(nextSlideNumber);
+		var slidesCount = getSlidesCount();
 
+		if (nextSlideNumber <= slidesCount) {
+			setSlide(nextSlideNumber);
+		}
 	}
 
-	setInterval(function() {
-		var slide = getRandom(0, 5);
-		console.log('slide = ',slide)
-		nextSlide();
-	}, 2000);
+	function prevSlide() {
+		var activeSlideNumber = getActiveNumber();
+		var prevSlideNumber = activeSlideNumber - 1;
+		var slidesCount = getSlidesCount();
 
+		if (prevSlideNumber > 0) {
+			setSlide(prevSlideNumber);
+		}
+	}
+
+	/*
+		returns intervalId
+	*/
+	function autoplay() {
+		var slidesCount = getSlidesCount();
+		var activeSlideNumber = getActiveNumber();
+		var nextSlideNumber = activeSlideNumber + 1;
+		console.log('slidesCount      = ',slidesCount);
+		console.log('activeSlideNumber= ',activeSlideNumber);
+		if (nextSlideNumber <= slidesCount) {
+			return setInterval(function () {
+				nextSlide();
+			}, 2000);
+		}
+		else {
+			return setInterval(function () {
+				prevSlide();
+			}, 2000);
+		}
+	}
+
+	$('.slider__prev-button').on('click', function () {
+		prevSlide();
+		clearInterval(intervalID);
+	});
+
+	$(document).on('click', '.slider__next-button', function () {
+		nextSlide();
+		clearInterval(intervalID);
+	});
+
+	$('.slider__autoplay-button').on('click', function () {
+		clearInterval(intervalID);
+		intervalID = autoplay();
+	});
 })();
