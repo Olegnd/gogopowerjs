@@ -17,7 +17,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         tr = document.createElement('tr');
         //th = document.createElement('th');
         th = '<th>'+ arrayKey[0] + '</th><th>' + arrayKey[1] + '</th><th>' + arrayKey[2] + '</th>';
-        thead.innerHTML = '<tr>' + th + '</th>';
+        thead.innerHTML = '<tr>' + th + '</tr>';
         
         for(index; index < data.length; index++) {
             tr = document.createElement('tr');
