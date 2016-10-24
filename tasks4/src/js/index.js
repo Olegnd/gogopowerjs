@@ -9,11 +9,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
     var table = document.querySelector('table');
     var thead = document.querySelector('thead');
     var tbody = document.querySelector('tbody');
-    var tr = document.createElement('tr');    
-    var th = document.createElement('th');
-    var td = document.createElement('td');
-    arrayKey = Object.keys(data[0]);
-        console.log(arrayKey);
+    var tr;    
+    var th;
+    var td;
+        arrayKey = Object.keys(data[0]);
+//--form HTML document--
+        tr = document.createElement('tr');
+        th = document.createElement('th');
         th = '<th>'+ arrayKey[0] + '</th><th>' + arrayKey[1] + '</th><th>' + arrayKey[2] + '</th>';
         thead.innerHTML = '<tr>' + th + '</th>';
         
