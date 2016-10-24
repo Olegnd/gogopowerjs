@@ -20,12 +20,10 @@ fetch('https://jsonplaceholder.typicode.com/users')
             tr.innerHTML = '<tr>'+ td +'</tr>';
             tbody.appendChild(tr);
         }
-    //console.log(data[1]);
-    var key = [];
+    
+    
     var arrayKey = [];
-    for(key in data[1]){
-        console.log(key);
-        }
-    console.log(key);
+        arrayKey = Object.keys(data[0])
+        console.log(arrayKey);
 });
 
