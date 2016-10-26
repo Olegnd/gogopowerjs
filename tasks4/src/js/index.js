@@ -34,7 +34,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
             tr.innerHTML = arrayTrTbody[index];
             tbody.appendChild(tr);
         }
-            
         function makeReverseId (){
             var i = 0;
             arrayTrTbody.reverse();
