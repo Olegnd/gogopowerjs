@@ -1,0 +1,183 @@
+﻿@charset "utf-8";
+
+img
+{
+	border: none;
+	vertical-align: middle;
+	border-collapse: separate;
+	-ms-interpolation-mode: bicubic;
+}
+
+img[align="right"]
+{
+	float: right;
+}
+
+img[align="left"]
+{
+	float: left;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 0;
+}
+
+table td
+{
+	padding: 0;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner
+{
+	border: 0;
+	padding: 0;
+}
+
+button
+{
+	overflow: visible;
+	outline: none;
+}
+
+button, input, select, textarea
+{
+	font-family: sans-serif;
+	font-size: 100%;
+	margin: 0;
+	vertical-align: middle;
+}
+
+textarea
+{
+	overflow: auto;
+	vertical-align: top;
+	-webkit-appearance: none;
+	resize: none;
+}
+
+input[type="search"]
+{
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+[hidden], input[type="hidden"]
+{
+	display: none;
+}
+
+[disabled]
+{
+	cursor: default;
+}
+
+
+sub, sup
+{
+	line-height: 0;
+}
+
+abbr[title]
+{
+	border-bottom: 1px dotted;
+}
+
+b, strong
+{
+	font-weight: bold;
+}
+
+small
+{
+	font-size: 80%;
+}
+
+
+html, body, form, fieldset, li, h1, h2, h3, h4, h5, h6, p
+{
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol
+{
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+
+dd
+{
+	margin: 0 0 0 2.5em;
+}
+
+
+header, nav, section, menu, main, article, figure, aside, footer, details, figcaption, hgroup, summary
+{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+audio, canvas, video
+{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+html
+{
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%; /*auto,none,100%*/
+	-ms-text-size-adjust: 100%;
+	overflow: auto;
+	height: 100%;
+	/*-webkit-tap-highlight-color: rgba(0,0,0,0);*/
+	/*-webkit-touch-callout: none;*/
+	/*-ms-touch-action: none;*/
+}
+
+body
+{
+	width: 100%;
+	height: 100%;
+	cursor: default;
+	/*font-size: 62.5%; Resets 1em to 10px */
+}
+
+
+:focus
+{
+	-moz-outline-style: none;
+}
+
+a
+{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+a[href^=tel]
+{
+	text-decoration: underline;
+	color: inherit;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+a:hover, a:active
+{
+	outline: none;
+}
+
+a:focus
+{
+	outline: thin dotted;
+}
